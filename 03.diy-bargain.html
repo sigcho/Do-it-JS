@@ -28,12 +28,16 @@
 		<div id="showResult"></div>
 	</div>
 	<script>
-		var originPrice
-		var rate
-		var savedPrice = originPrice * (rate / 100);
-		var resultPrice = originPrice - savedPrice;
+		function showPrice() {
+			var originPrice = document.querySelector('#oPrice').value;
+			var rate = document.querySelector('#rate').value;
 
-		document.querySelector(#showResult).innerHTML = resultPrice
+			var savedPrice = originPrice * (rate / 100);
+			var resultPrice = originPrice - savedPrice;
+
+			document.querySelector('#showResult').innerHTML = "상품 원래 가격은 " + originPrice + "원이고, 할인율은 " + rate + "%입니다. " +
+				savedPrice + "원을 절약한 " + resultPrice + "원에 살 수 있습니다."
+		}
 	</script>
 </body>
 
